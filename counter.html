@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Click Counter</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+        }
+        button {
+            font-size: 2rem;
+            padding: 1rem 2rem;
+        }
+    </style>
+</head>
+<body>
+    <button id="counter-btn">Count: 0</button>
+
+    <script>
+        let count = 0;
+        const btn = document.getElementById('counter-btn');
+        btn.addEventListener('click', () => {
+            count += 1;
+            btn.textContent = `Count: ${count}`;
+        });
+    </script>
+</body>
+</html>
